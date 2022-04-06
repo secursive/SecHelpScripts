@@ -1,1 +1,0 @@
-https://github.com/secursive/log4j-CVEs-scripts
