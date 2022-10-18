@@ -1,6 +1,8 @@
 #!/bin/bash
 
-[[ -z "${LIBNAME}" ]] && echo "Usage: LIBNAME=libnss $0" && exit
+[[ -z "${LIBNAME}" ]] && echo "Usage: LIBNAME=libnss $0" && exit 1
+
+type ldd >/dev/null 2>&1 || { echo "ERROR: ldd is not installed.  Aborting."; exit 1; }
 
 if [ $# -ne 0 ]
 then
