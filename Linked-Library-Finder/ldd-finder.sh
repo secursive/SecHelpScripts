@@ -6,7 +6,7 @@ type ldd >/dev/null 2>&1 || { echo "ERROR: ldd is not installed.  Aborting."; ex
 
 if [ $# -ne 0 ]
 then
-  ldd $1 2>&1 | grep "$LIBNAME" 2>&1 >/dev/null
+  ldd $1 2>&1 | grep -i "$LIBNAME" 2>&1 >/dev/null
   if [ $? -eq 0 ]
   then
     echo "$1"
